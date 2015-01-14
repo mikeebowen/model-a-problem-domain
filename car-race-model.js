@@ -7,10 +7,10 @@
     this.lossses     = 0;
   }
 
-function Car(model, speed) {
-  this.model = model;
-  this.speed = speed;
-}
+  function Car(model, speed) {
+    this.model = model;
+    this.speed = speed;
+  }
 
 
 
