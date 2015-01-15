@@ -1,10 +1,15 @@
 <script>
+  
+  var drivers = {};
 
-  function Driver(name, driverSkill){
-    this.driverSkill = driverSkill;
+  function Driver(name){
     this.name        = name;
-    this.wins        = 0;
-    this.lossses     = 0;
+    this.driverSkill = Math.random() + .01;
+  }
+
+  var names = ["tom", "bob", "elmo"];
+  for (name in names) {
+  drivers[names[name]] = (new Driver(names[name]));
   }
 
   function Car(model, speed) {
@@ -12,13 +17,22 @@
     this.speed = speed;
   }
 
-  function Track(trackName,trackDistance,trackDifficulty){
+   var cars = [ferrari = new Car('Ferrari', 150),
+               gremlin = new Car('Gremlin', 180),
+               aston = new Car('Aston Martin', 140)];
+
+  function Track(trackName,trackDistance){
     this.trackName       = trackName;
     this.distance        = trackDistance;
-    this.trackDifficulty = trackDifficulty;
   }
 
-  function Race(laps){
+  var tracks = [monaco = new Track('Monaco', 1000),
+                laguna = new Track('Laguna Seca', 800),
+                nuremberg = new Track('Neremburg', 1500)];
+
+
+
+  function Race(laps, cars, drivers, track){
     this.laps = laps;
     this.luck = function(){
       //something to add randomness to laps
@@ -37,3 +51,15 @@
 
 /* driverSkill combined with trackDifficulty affects car speed. Car speed, trackDistance, and luck output winner and losers. */
 </script>
+
+
+
+
+
+
+// add to race object: car and track instance to race
+
+
+
+
+
