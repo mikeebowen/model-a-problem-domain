@@ -1,5 +1,4 @@
 var drivers = {};
-var champion;
 
 function Car(model, speed) {
   this.model = model;
@@ -33,6 +32,7 @@ var nuremberg = new Track('Neremburg', 1500);
 
 function Race(drivers, track){
   var lowestTime = 1000;
+  var champion;
   for(var name in drivers) {
     drivers[name].time = track.distance / ((drivers[name].driverSkill) * (drivers[name].car.speed));
     if (drivers[name].time < lowestTime) {
