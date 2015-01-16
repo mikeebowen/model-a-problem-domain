@@ -1,5 +1,22 @@
-
 var drivers = {};
+var bank = 500;
+
+function bet(num, driver) {
+  if (num > bank) {
+    console.log('Slow down, you aren\'t that rich.')
+  } else {
+    if (driver === champion) {
+      bank += num;
+      console.log('You won!');
+    } else {
+      bank -= num;
+      console.log('You lose.');
+      if (bank <= 0) {
+        console.log("Sorry, you are out of money!")
+      }
+    }
+  }  
+}
 
 function Car(model, speed) {
   this.model = model;
@@ -7,8 +24,8 @@ function Car(model, speed) {
 }
 
 var cars = [ferrari = new Car('Ferrari', 150),
-           gremlin = new Car('Gremlin', 180),
-           aston = new Car('Aston Martin', 140)];
+            gremlin = new Car('Gremlin', 180),
+            aston   = new Car('Aston Martin', 140)];
 
 function Driver(name){
   this.name        = name;
@@ -17,11 +34,10 @@ function Driver(name){
   this.time        =0;
 }
 
-var names = ["tom", "bob", "elmo"];
+var names = ["Tom", "Bob", "Elmo"];
 for (name in names) {
 drivers[names[name]] = (new Driver(names[name]));
 }
-
 
 function Track(trackName,trackDistance){
   this.trackName       = trackName;
@@ -32,26 +48,19 @@ var monaco    = new Track('Monaco', 1000);
 var laguna    = new Track('Laguna Seca', 800);
 var nuremberg = new Track('Neremburg', 1500);
 
-
-
 function Race(drivers, track){
+  var lowestTime = 1000;
+  var champion;
   for(var name in drivers) {
-  drivers[name].time = track.distance / ((drivers[name].driverSkill) * (drivers[name].car.speed));
-  }
-  this.winner = function(){
-  }
-}
-
-/* driverSkill combined with trackDifficulty affects car speed. Car speed, trackDistance, and luck output winner and losers. */
-
-
-
-
-
-
-
-// add to race object: car and track instance to race
-
+    drivers[name].time = track.distance / ((drivers[name].driverSkill) * (drivers[name].car.speed));
+    if (drivers[name].time < lowestTime) {
+      lowestTime = drivers[name].time;
+      champion = drivers[name];
+    }
+  }  
+  console.log(' The winner is ' + champion.name + '!');
+  return champion;
+};
 
 
 
