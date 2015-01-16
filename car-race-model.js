@@ -1,4 +1,22 @@
 var drivers = {};
+var bank = 500;
+
+function bet(num, driver) {
+  if (num > bank) {
+    console.log('Slow down, you aren\'t that rich.')
+  } else {
+    if (driver === champion) {
+      bank += num;
+      console.log('You won!');
+    } else {
+      bank -= num;
+      console.log('You lose.');
+      if (bank <= 0) {
+        console.log("Sorry, you are out of money!")
+      }
+    }
+  }  
+}
 
 function Car(model, speed) {
   this.model = model;
