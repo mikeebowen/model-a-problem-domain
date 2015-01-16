@@ -1,0 +1,48 @@
+.page-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.make-inline-block {
+  display: inline-block;
+}
+
+.no-clear {
+  clear: none;
+}
+
+.yes-clear {
+  clear: both;
+}
+
+.navigation {
+  background-color: gray;
+  margin-left: 1.6%;
+}
+.site-header {
+  background-color: red;
+}
+
+.bet-info {
+  /*background-color: green;*/
+}
+
+.game {
+  background-color: yellow;
+}
+
+.footer-section {
+  background-color: black;
+}
+
+.driver-button {
+  margin: 0.25%;
+}
