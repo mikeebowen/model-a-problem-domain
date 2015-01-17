@@ -66,7 +66,3 @@ function Race(drivers, track){
   console.log(' The winner is ' + champion.name + '!');
   return champion;
 };
-
-
-
-
