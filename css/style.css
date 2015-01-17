@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 img {
@@ -49,6 +50,7 @@ nav>a:hover {
   margin: 0 auto;
   background-color: hsla(0, 0%, 18%, 0.79);
   margin-top: 2%;
+  margin-bottom: 2%
 }
 
 .float-right {
