@@ -31,7 +31,17 @@ nav {
   font-family: Baumans;
   font-weight: bold;
   font-size: 25px;
+  line-height: 0%;
+  float: left;
+}
+
+nav>* {
   line-height: 150%;
+  margin-right: 3%;
+}
+
+nav>a:hover {
+  background-color: hsla(220, 30%, 0%, 0.75);
 }
 
 .page-container {
@@ -63,14 +73,22 @@ nav {
 
 .social-icons {
 position: fixed; top: 35%; left: 87%;
+width: 5%;
 }
 
+/*.social-for-small-screens {
+  display: none;
+}
+*/
 .main-content {
 /*background-image: url(..images/0928Alonso4.jpg);
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   background-size: contain;*/
+}
+.main-content img {
+  z-index: 0;
 }
 
 .navigation {
@@ -102,4 +120,15 @@ position: fixed; top: 35%; left: 87%;
 
 .driver-button {
   margin: 0.25%;
+}
+
+@media only screen and (max-width: 1250px) {
+  .social-icons {
+    display: none;
+  }
+
+@media only screen and (max-width: 480px) {
+  .social-icons {
+    display: none;
+  }
 }
