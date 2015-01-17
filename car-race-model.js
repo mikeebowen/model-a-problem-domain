@@ -1,3 +1,4 @@
+var champion;
 var drivers = {};
 
 var bank = 500;
@@ -6,7 +7,7 @@ document.getElementById('bob').addEventListener('click', function() {userDriver 
 document.getElementById('tom').addEventListener('click', function() {userDriver = drivers.Tom}, false);
 document.getElementById('elmo').addEventListener('click', function() {userDriver = drivers.Elmo}, false);
 
-function bet(num, userDriver) {
+function bet(num) {
   if (num > bank) {
     console.log('Slow down, you aren\'t that rich.')
   } else {
@@ -55,7 +56,6 @@ var nuremberg = new Track('Neremburg', 1500);
 
 function Race(drivers, track){
   var lowestTime = 1000;
-  var champion;
   for(var name in drivers) {
     drivers[name].time = track.distance / ((drivers[name].driverSkill) * (drivers[name].car.speed));
     if (drivers[name].time < lowestTime) {
