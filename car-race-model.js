@@ -1,5 +1,5 @@
 var drivers = {};
-.
+
 var bank = 500;
 var userDriver;
 document.getElementById('bob').addEventListener('click', function() {userDriver = drivers.Bob}, false);
@@ -20,7 +20,7 @@ function bet(num, userDriver) {
         console.log("Sorry, you are out of money!")
       }
     }
-  }  
+  }
 }
 
 function Car(model, speed) {
@@ -62,7 +62,7 @@ function Race(drivers, track){
       lowestTime = drivers[name].time;
       champion = drivers[name];
     }
-  }  
+  }
   console.log(' The winner is ' + champion.name + '!');
   return champion;
 };
