@@ -62,12 +62,15 @@ nav {
 }
 
 .social-icons {
-position: absolute; top: 35%; left: 87%;
-
+position: fixed; top: 35%; left: 87%;
 }
 
 .main-content {
-
+/*background-image: url(..images/0928Alonso4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  background-size: contain;*/
 }
 
 .navigation {
