@@ -5,11 +5,11 @@ body {
   background-image: url(../images/car-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 h1 {
@@ -31,13 +31,14 @@ nav {
   font-family: Baumans;
   font-weight: bold;
   font-size: 25px;
-  line-height: 300%;
+  line-height: 150%;
 }
 
 .page-container {
   max-width: 960px;
   margin: 0 auto;
   background-color: hsla(0, 0%, 18%, 0.79);
+  margin-top: 2%;
 }
 
 .float-right {
@@ -58,6 +59,11 @@ nav {
 
 .yes-clear {
   clear: both;
+}
+
+.social-icons {
+position: absolute; top: 35%; left: 87%;
+
 }
 
 .main-content {
