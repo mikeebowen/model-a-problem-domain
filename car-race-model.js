@@ -1,11 +1,15 @@
 var drivers = {};
 var bank = 500;
+var userDriver;
+document.getElementById('bob').addEventListener('click', function() {userDriver = drivers.Bob}, false);
+document.getElementById('tom').addEventListener('click', function() {userDriver = drivers.Tom}, false);
+document.getElementById('elmo').addEventListener('click', function() {userDriver = drivers.Elmo}, false);
 
-function bet(num, driver) {
+function bet(num, userDriver) {
   if (num > bank) {
     console.log('Slow down, you aren\'t that rich.')
   } else {
-    if (driver === champion) {
+    if (userDriver === champion) {
       bank += num;
       console.log('You won!');
     } else {
