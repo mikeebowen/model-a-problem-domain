@@ -1,6 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Contrail+One);
+@import url(http://fonts.googleapis.com/css?family=Baumans);
+
+body {
+  background-image: url(../images/car-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: Contrail One;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  line-height: 150%;
+}
+
+h2 {
+  font-family: Contrail One;
+  font-size: 25px;
+  text-align: center;
+  line-height: 150%;
+}
+
+nav {
+  font-family: Baumans;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 150%;
+}
+
 .page-container {
   max-width: 960px;
   margin: 0 auto;
+  background-color: hsla(0, 0%, 18%, 0.79);
+  margin-top: 2%;
 }
 
 .float-right {
@@ -23,12 +61,30 @@
   clear: both;
 }
 
+.social-icons {
+position: fixed; top: 35%; left: 87%;
+}
+
+.main-content {
+/*background-image: url(..images/0928Alonso4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  background-size: contain;*/
+}
+
 .navigation {
-  background-color: gray;
+  /*background-color: gray;*/
   margin-left: 1.6%;
 }
+
+.navigation a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+
 .site-header {
-  background-color: red;
+  /*background-color: red;*/
 }
 
 .bet-info {
@@ -36,11 +92,12 @@
 }
 
 .game {
-  background-color: yellow;
+  /*background-color: yellow;*/
 }
 
 .footer-section {
-  background-color: black;
+  /*background-color: black;*/
+  background-color: hsla(0, 0%, 18%, 0.94);
 }
 
 .driver-button {
