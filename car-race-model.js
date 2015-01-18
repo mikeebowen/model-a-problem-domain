@@ -1,6 +1,5 @@
 var champion;
 var drivers = {};
-
 var bank = 500;
 var userDriver;
 document.getElementById('bob').addEventListener('click', function() {userDriver = drivers.Bob}, false);
