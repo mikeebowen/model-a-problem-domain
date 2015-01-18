@@ -1,11 +1,11 @@
 var champion;
 var drivers = {};
-
 var bank = 500;
 var userDriver;
 document.getElementById('bob').addEventListener('click', function() {userDriver = drivers.Bob}, false);
 document.getElementById('tom').addEventListener('click', function() {userDriver = drivers.Tom}, false);
 document.getElementById('elmo').addEventListener('click', function() {userDriver = drivers.Elmo}, false);
+document.getElementById('play').addEventListener('click', play, false);
 
 function bet(num) {
   if (num > bank) {
@@ -66,3 +66,8 @@ function Race(drivers, track){
   console.log(' The winner is ' + champion.name + '!');
   return champion;
 };
+
+function play() {
+  Race(drivers, monaco);
+  bet(Number(document.getElementById('bet').value));
+}
