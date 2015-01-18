@@ -6,6 +6,7 @@ document.getElementById('bob').addEventListener('click', function() {userDriver 
 document.getElementById('tom').addEventListener('click', function() {userDriver = drivers.Tom}, false);
 document.getElementById('elmo').addEventListener('click', function() {userDriver = drivers.Elmo}, false);
 document.getElementById('play').addEventListener('click', play, false);
+document.getElementById('bank').innerHTML = 'Your funds: ' +bank;
 
 function bet(num) {
   if (num > bank) {
@@ -22,6 +23,9 @@ function bet(num) {
       }
     }
   }
+  for(var name in drivers) {
+    drivers[name].driverSkill = Math.random() + .01;
+  }  
 }
 
 function Car(model, speed) {
@@ -70,4 +74,6 @@ function Race(drivers, track){
 function play() {
   Race(drivers, monaco);
   bet(Number(document.getElementById('bet').value));
+  document.getElementById('bank').innerHTML = 'Your funds: ' +bank;
+
 }
