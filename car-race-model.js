@@ -2,6 +2,7 @@ var champion;
 var drivers = {};
 var bank = 500;
 var userDriver;
+var msg = document.getElementById('msg');
 document.getElementById('bob').addEventListener('click', function() {userDriver = drivers.Bob}, false);
 document.getElementById('tom').addEventListener('click', function() {userDriver = drivers.Tom}, false);
 document.getElementById('elmo').addEventListener('click', function() {userDriver = drivers.Elmo}, false);
@@ -9,23 +10,16 @@ document.getElementById('play').addEventListener('click', play, false);
 document.getElementById('bank').innerHTML = 'Your funds: ' +bank;
 
 function bet(num) {
-  if (num > bank) {
-    console.log('Slow down, you aren\'t that rich.')
+  if (userDriver === champion) {
+    bank += num;
+    msg.innerHTML = ('You won!');
   } else {
-    if (userDriver === champion) {
-      bank += num;
-      console.log('You won!');
-    } else {
-      bank -= num;
-      console.log('You lose.');
-      if (bank <= 0) {
-        console.log("Sorry, you are out of money!")
-      }
+    bank -= num;
+    msg.innerHTML = ('You lose.');
+    if (bank <= 0) {
+      msg.innerHTML = ("Sorry, you are out of money!")
     }
   }
-  for(var name in drivers) {
-    drivers[name].driverSkill = Math.random() + .01;
-  }  
 }
 
 function Car(model, speed) {
@@ -67,13 +61,19 @@ function Race(drivers, track){
       champion = drivers[name];
     }
   }
-  console.log(' The winner is ' + champion.name + '!');
+  document.getElementById('winner').innerHTML = ' The winner is ' + champion.name + '!';
   return champion;
 };
 
 function play() {
-  Race(drivers, monaco);
-  bet(Number(document.getElementById('bet').value));
-  document.getElementById('bank').innerHTML = 'Your funds: ' +bank;
-
+  if (document.getElementById('bet').value > bank) {
+    console.log('Slow down, you aren\'t that rich.');
+  } else {  
+    Race(drivers, monaco);
+    bet(Number(document.getElementById('bet').value));
+    document.getElementById('bank').innerHTML = 'Your funds: ' +bank;
+    for(var name in drivers) {
+    drivers[name].driverSkill = Math.random() + .01;
+    } 
+  }   
 }
