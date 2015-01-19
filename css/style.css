@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Contrail+One);
 @import url(http://fonts.googleapis.com/css?family=Baumans);
+@import url(http://fonts.googleapis.com/css?family=Raleway:800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
 body {
   background-image: url(../images/car-background.jpg);
@@ -8,6 +10,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+p {
+  font-family: Raleway;
+  line-height: 150%
+};
 
 img {
   max-width: 100%;
@@ -18,22 +25,36 @@ h1 {
   font-weight: bold;
   font-size: 60px;
   text-align: center;
-  line-height: 150%;
+  line-height: 200%;
 }
 
 h2 {
   font-family: Contrail One;
-  font-size: 25px;
+  font-size: 45px;
   text-align: center;
+  line-height: 200%;
+}
+
+h3 {
+  font-family: Contrail One;
+  font-size: 25px;
   line-height: 150%;
 }
+
+h4 {
+  color: hsla(209, 65%, 88%, 1);
+  font-family: Contrail One;
+  font-size: 45px;
+  text-align: center;
+  line-height: 200%;
+}
+
 
 nav {
   font-family: Baumans;
   font-weight: bold;
   font-size: 25px;
   line-height: 0%;
-  float: left;
 }
 
 nav>* {
@@ -45,12 +66,21 @@ nav>a:hover {
   background-color: hsla(220, 30%, 0%, 0.75);
 }
 
+button:hover {
+  background-color: hsla(220, 30%, 0%, 0.75);
+}
+
 .page-container {
   max-width: 960px;
   margin: 0 auto;
   background-color: hsla(0, 0%, 18%, 0.79);
   margin-top: 2%;
   margin-bottom: 2%
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .float-right {
@@ -78,16 +108,21 @@ position: fixed; top: 35%; left: 87%;
 width: 5%;
 }
 
-/*.social-for-small-screens {
-  display: none;
-}
-*/
+
 .main-content {
 /*background-image: url(..images/0928Alonso4.jpg);
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
   background-size: contain;*/
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 2% 0 2% 0;
+  min-height: 575px;
+  background-image: url(../images/0928Alonso4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .main-content img {
   z-index: 0;
@@ -118,19 +153,44 @@ width: 5%;
 .footer-section {
   /*background-color: black;*/
   background-color: hsla(0, 0%, 18%, 0.94);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.footer-section p {
+  font-size: 0.75em;
+  font-family: Open Sans Condensed;
 }
 
 .driver-button {
   margin: 0.25%;
 }
 
+.enter-bet {
+  font-size: 3em;
+}
+
+.run-race {
+  width:30%;
+  height:5%;
+  color:white;
+  background-color:#bc7058;
+}
+
+.results {
+  color: #ffffff;
+  background-color: hsla(334, 54%, 4%, 0.83);
+  font-family: Contrail One;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  line-height: 200%;
+}
+}
+
 @media only screen and (max-width: 1250px) {
   .social-icons {
     display: none;
   }
-
-@media only screen and (max-width: 480px) {
-  .social-icons {
-    display: none;
-  }
-}

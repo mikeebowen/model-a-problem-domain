@@ -12,35 +12,11 @@
     <header class="site-header span_10_of_10">
       <a href="index.html"><img src="images/header.jpg" /></a>
     </header>
-    <nav class="navigation float-left no-clear span_2_of_10">
+    <nav class="navigation span_10_of_10">
       <a href="index.html">Home</a>
-      <br />
       <a href="race.html">Play the Game</a>
-      <br />
       <a href="about.html">About Us</a>
-    </nav>
-    <section class="main-content bet-info no-clear span_8_of_10 float-right">
-      <h2>Place your bets here</h2>
-      <button id="bob" class="driver-button">
-        <img src="images/bob-ross.jpg" />
-      </button>
-      <button id="elmo"class="driver-button">
-        <img src="images/elmo.jpg" />
-      </button>
-      <button id="tom" class="driver-button">
-        <img src="images/tom-cruise.jpg" />
-      </button>
-    </section>
-    <section>
-      <h1 id='bank'><h1>
-      <input type='text' id='bet' placeholder='Enter your bet.'>
-      <button type='button' id='play'>  
-    </section>
-    <section class="game span_10_of_10 yes-clear">
-      <h2> Here's the race</h2>
-      <section id="winner"></section>
-      <section id="msg"></section>
-    </section>
+    </nav>.
     <section class="social-icons">
       <a href="https://www.facebook.com/">
         <img src="images/facebook-icon-2.png" />
@@ -58,8 +34,48 @@
         <img src="images/youtube-icon-2.png">
       </a>
     </section>
-    <footer class="footer-section span_10_of_10 yes-clear">
-      <h2>This is the footer</h2>
+    <section class="main-content bet-info no-clear span_9_of_10 float-right center">
+      <h2>Choose Your Driver</h2>
+      <button id="bob" class="driver-button">
+        <img src="images/bob-ross.jpg" />
+      </button>
+      <button id="elmo"class="driver-button">
+        <img src="images/elmo.jpg" />
+      </button>
+      <button id="tom" class="driver-button">
+        <img src="images/tom-cruise.jpg" />
+      </button>
+      <h4>Place your bet:</h4>
+      <input type='text' id='bet' class="enter-bet" placeholder='Enter your bet.'>
+      <br /><br /><br />
+      <button type='button' class="run-race"id='play'>
+      <h3>Click Here to Run the Race!</h3>
+      </button>
+      <br /><br />
+      <section class="results">
+        <h3 id='bank'><h3>
+        <section id="winner"></section>
+        <section id="msg"></section>
+    </section>
+    </section>
+    <footer class="footer-section navigation span_10_of_10 yes-clear">
+      <nav class="span_10_of_10">
+        <a href="https://www.facebook.com/">
+          <img src="images/facebook-icon-2.png" />
+        </a>
+        <a href="https://twitter.com/">
+          <img src="images/twitter-icon-2.png" />
+        </a>
+        <a href="https://www.google.com/">
+          <img src="images/google-plus-icon-2.png" />
+        </a>
+        <a href="https://www.youtube.com/">
+          <img src="images/youtube-icon-2.png">
+        </a>
+        <br />
+        <a href="http://www.indeed.com/">Employment</a> | <a href="https://www.google.com/maps">Directions</a> | <a href="http://www.ncaa.org/about/resources/media-center/gambling-college-sports">Department of Irony</a> | <a href="about.html">About Us</a>
+        <p>Copyright 2015 - Legalize Sports Betting, LLC</p>
+      </nav>
     </footer>
   </div>
   <script src="car-race-model.js" type="text/javascript" charset="utf-8"></script>
