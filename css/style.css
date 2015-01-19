@@ -13,7 +13,8 @@ body {
 
 p {
   font-family: Raleway;
-  line-height: 150%
+  line-height: 150%;
+  text-align: left;
 };
 
 img {
@@ -70,6 +71,14 @@ button:hover {
   background-color: hsla(220, 30%, 0%, 0.75);
 }
 
+article {
+  background-color: hsla(50, 78%, 100%, 0.59);
+}
+
+.article-box {
+  padding: 5px 5px 5px 5px;
+}
+
 .page-container {
   max-width: 960px;
   margin: 0 auto;
@@ -124,9 +133,6 @@ width: 5%;
   background-position: center;
   background-size: cover;
 }
-.main-content img {
-  z-index: 0;
-}
 
 .navigation {
   /*background-color: gray;*/
@@ -157,10 +163,6 @@ width: 5%;
   text-align: center;
   padding-top: 1%;
   padding-bottom: 1%;
-}
-
-.footer-section p {
-  font-size: 0.75em;
   font-family: Open Sans Condensed;
 }
 
@@ -187,7 +189,6 @@ width: 5%;
   font-size: 60px;
   text-align: center;
   line-height: 200%;
-}
 }
 
 @media only screen and (max-width: 1250px) {
